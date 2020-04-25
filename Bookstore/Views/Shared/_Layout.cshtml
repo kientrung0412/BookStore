@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@using Model.DAO
+@{
+    ChuDeDAO chuDeDao = new ChuDeDAO();
+    int a = chuDeDao.List().Count;
+}
+
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8"/>
@@ -31,7 +37,7 @@
     @RenderBody()
     <hr/>
     <footer>
-        <p>&copy; @DateTime.Now.2020 - My ASP.NET Application</p>
+        <p>@a</p>
     </footer>
 </div>
 
